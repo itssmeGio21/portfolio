@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #dedede;
+  background-color: #0a0a0a; /* Dark background for contrast */
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #0ef;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  opacity: 0.9;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.header:hover {
+  background: rgba(0, 0, 0, 0.9); /* Darken header on hover */
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #0ef;
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('d:/huawei/Pictures/websitepic.jpg') no-repeat center center/cover; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(0.7); /* Darken background for contrast */
+}
+
+.home-content {
+  max-width: 600px;
+  text-align: center;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 15px;
+  transform: translateY(50px); /* Start below */
+  opacity: 0; /* Start invisible */
+  animation: fadeInUp 0.8s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  animation: bounce 1s infinite; /* Bouncing animation */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.home-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  transition: background 0.5s ease, transform 0.3s ease; /* Transition effects */
+  margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  text-decoration: none; 
+  transition: box-shadow 0.5s ease, transform 0.3s ease; /* Transition effects */
+  margin: 10px; /* Space between buttons */
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px cyan,
+              0 0 25px cyan,
+              0 0 50px cyan,
+              0 0 100px cyan,
+              0 0 200px cyan;
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.secondary {
+  background: #f39c12; /* Different color for secondary button */
+}
+
+.secondary:hover {
+  background: #e67e22; /* Darker shade on hover */
+}
+
+/* Section Styles */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 10%;
+}
+
+/* About Section */
+.about {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(20, 20, 20, 0.8)); /* Dark gradient */
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: left; /* Align text to the left */
+  z-index: 1;
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start below */
+  animation: fadeInUp 0.8s forwards; /* Fade-in animation */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.about-content h2 {
+  color: #0ef; /* Bright color for heading */
+}
+
+.about-content p {
+  margin-bottom: 15px; /* Space between paragraphs */
+  line-height: 1.6; /* Improved line height for readability */
+  color: #ffffff; /* White text for paragraphs */
+}
+
+/* Skills Section */
+.skills {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(30, 30, 30, 0.8)); /* Dark gradient */
+}
+
+.skills-content {
+  max-width: 800px;
+  z-index: 1;
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start below */
+  animation: fadeInUp 0.8s forwards; /* Fade-in animation */
+}
+
+.skills-content h2 {
+  color: #0ef; /* Bright color for heading */
+}
+
+.skills-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-content li {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 50px;
+}
+
+.skills-content li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 8px;
+  width: 100%;
+  background: #0ef;
+  transform: scaleX(0);
+  transition: transform 0.5s ease; /* Animate bar */
+}
+
+.skills-content li:hover::before {
+  transform: scaleX(1); /* Expand bar on hover */
+}
+
+/* Portfolio Section */
+.portfolio {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(20, 20, 20, 0.8)); /* Dark gradient */
+}
+
+.portfolio-content {
+  max-width: 800px;
+  z-index: 1;
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start below */
+  animation: fadeInUp 0.8s forwards; /* Fade-in animation */
+}
+
+.portfolio-content h2 {
+  color: #0ef; /* Bright color for heading */
+}
+
+/* Contact Section */
+.contact {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(20, 20, 20, 0.8)); /* Dark gradient */
+}
+
+.contact-content {
+  max-width: 800px;
+  z-index: 1;
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start below */
+  animation: fadeInUp 0.8s forwards; /* Fade-in animation */
+}
+
+.contact-content h2 {
+  color: #0ef; /* Bright color for heading */
+}
+
+/* Animation for sections */
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
